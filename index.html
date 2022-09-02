@@ -118,6 +118,21 @@
         margin-bottom: 8px;
         color: #4c4c4c;
       }
+
+      @media screen and (max-width: 640px) {
+        .contact-box,
+        .section-2 {
+          display: flex;
+          flex-direction: column;
+        }
+        .split {
+          flex-direction: column;
+          gap: 8px;
+        }
+        .split > div {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
