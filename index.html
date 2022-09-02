@@ -7,8 +7,116 @@
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: inherit;
+      }
+
       body {
+        padding: 2.5% 5%;
         font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: #fff;
+        color: #262626;
+        line-height: 1.3;
+      }
+
+      header {
+        margin-bottom: 16px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li::marker {
+        color: #4c4c4c;
+      }
+      .name {
+        font-size: 40px;
+        margin-bottom: 5px;
+      }
+      .tag {
+        font-size: 16px;
+        margin-bottom: 16px;
+        color: #4c4c4c;
+        font-weight: 500;
+        display: block;
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        font-size: 16px;
+      }
+      .contact-box > div a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #0072b1;
+        font-weight: 500;
+      }
+      a {
+        text-decoration: none;
+        color: #0072b1;
+      }
+      main {
+        margin-top: 24px;
+      }
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .subtitle,
+      .wk_title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .split {
+        display: flex;
+        margin-top: 16px;
+        justify-content: space-between;
+      }
+      .split > div {
+        width: 47.5%;
+      }
+      .bold {
+        font-weight: 600;
+      }
+      .section-2 {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, 47.5%);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+        justify-content: space-between;
+      }
+      .section-2 .title {
+        margin-bottom: 8px;
+      }
+      .ss-1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      .ss-2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      .ss-3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+      .work {
+        margin-bottom: 16px;
+      }
+      .wk_duration {
+        margin-bottom: 8px;
+        color: #4c4c4c;
       }
     </style>
   </head>
@@ -19,20 +127,22 @@
       <span class="tag">Frontend Developer & Technical Writer/Blogger</span>
       <div class="contact-box">
         <div>
-          <ion-icon name="mail-outline"></ion-icon>
-          <a href="mailto:koladeleolaitan@gmail.com">koladeleolaitan@gmail.com</a>
+          <a href="mailto:koladeleolaitan@gmail.com"
+            ><ion-icon name="mail-outline"></ion-icon> koladeleolaitan@gmail.com</a
+          >
         </div>
         <div>
-          <ion-icon name="logo-linkedin"></ion-icon>
-          <a href="https://www.linkedin.com/in/koladeleolaitan/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/koladeleolaitan/"
+            ><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
+          >
         </div>
         <div>
-          <ion-icon name="call-outline"></ion-icon>
-          <a href="tel:+2347081540289">+2347081540289</a>
+          <a href="tel:+2347081540289"><ion-icon name="call-outline"></ion-icon> +2347081540289</a>
         </div>
         <div>
-          <ion-icon name="globe-outline"></ion-icon>
-          <a href="https://koladeleolaitan.com/">Portfolio Website</a>
+          <a href="https://koladeleolaitan.com/"
+            ><ion-icon name="globe-outline"></ion-icon> Portfolio Website</a
+          >
         </div>
       </div>
     </header>
@@ -41,7 +151,9 @@
         <h2 class="title">About</h2>
         <p>
           I'm a Frontend Developer with over 3 years of experience making the web better by
-          deploying amazing web applications with a portfolio to show for it.
+          deploying amazing web applications with a portfolio to show for it. <br />
+          I use my skills to build first-class, mobile-responsive, speed-optimized, and accessible
+          websites.
         </p>
         <div class="split">
           <div class="subsection">
@@ -91,14 +203,96 @@
       </section>
 
       <section class="section-2">
-        <div class="subsection">
+        <div class="subsection ss-1">
           <h2 class="title">Work Experience</h2>
+          <div class="work">
+            <h3 class="wk_title">Web Content Writer</h3>
+            <a href="https://decentralize.africa/" class="wk_company">Decentralize Africa</a>
+            <p class="wk_duration">Feb 2022 - Present (7 months +)</p>
+            <ul>
+              <li>Wrote creative content that promote the brand.</li>
+              <li>Improved SEO for higher page and post rankings on search engines.</li>
+              <li>
+                Did editing and proofreading of existing and new articles to ensure they are of good
+                quality.
+              </li>
+              <li>Written over 25 articles so far.</li>
+            </ul>
+          </div>
+
+          <div class="work">
+            <h3 class="wk_title">Frontend Developer</h3>
+            <a href="https://unlimited.ng/" class="wk_company">Unlimited.ng</a>
+            <p class="wk_duration">Nov 2020 - July 2021 (9months)</p>
+            <ul>
+              <li>
+                Taught 5 students HTML, CSS, and JavaScript at a bootcamp hosted by the company.
+              </li>
+              <li>
+                Built a website for the bootcamp to automate the registration process and
+                onboarding.
+              </li>
+              <li>Awarded as the most punctual employee.</li>
+              <li>
+                Collaborated with the marketing team to source for clients via various means and
+                also discuss with clients to know their project requirements.
+              </li>
+              <li>Landed the company one paid client.</li>
+              <li>Worked on over 15 unique projects in an 9-month period.</li>
+            </ul>
+          </div>
         </div>
-        <div class="subsection">
+        <div class="subsection ss-2">
           <h2 class="title">Achievements</h2>
+          <div class="work">
+            <ul>
+              <li>
+                I have written <a href="https://publikphigor.me/blog/">articles on WordPress</a> and
+                other tools I use in building websites.
+              </li>
+              <li>
+                I have contributed to open-source by opening an issue on Ubuntu.com GitHub repo
+                after spotting a bug on their website. I also
+                <a href="https://github.com/canonical-web-and-design/ubuntu.com/pull/11832"
+                  >made a pull request and fixed the bug.</a
+                >
+              </li>
+              <li>
+                I read about a
+                <a
+                  href="https://blog.logrocket.com/jank-free-page-loading-with-media-aspect-ratios/"
+                  >problem</a
+                >
+                in responsive website design and I
+                <a href="https://calcaspectratio.netlify.app/">built a tool</a> that solves the
+                problem.
+              </li>
+              <li>
+                I organized a webinar where I taught 120 students about crypto and Blockchain.
+                <a
+                  href="https://drive.google.com/drive/folders/1zsMk6UkDlaDJ4_sI9GWNXEtsauW3FKIk?usp=sharing"
+                  >Here is a link to the resources (written guides and videos) I made for the
+                  webinar.</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="subsection">
+        <div class="subsection ss-3">
           <h2 class="title">Education</h2>
+          <div class="work">
+            <h3 class="wk_title">Univeristy of Ilorin</h3>
+            <p class="wk_company">Bachelor of Education - BEd, Counselor Education</p>
+            <p class="wk_duration">2018 - 2022</p>
+            <ul>
+              <li>I held 3 different office posts in 3 years in a students' organization.</li>
+              <li>
+                I gave a talk on Blockchain at an FTX-organized event that saw over 50 students in
+                attendance.
+              </li>
+              <li>Was awarded a Federal Government Scholarship.</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
