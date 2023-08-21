@@ -99,9 +99,6 @@
       }
       .section-2 {
         margin-top: 16px;
-        display: grid;
-        grid-template-columns: repeat(2, 47.5%);
-        grid-template-rows: repeat(2, 1fr);
         gap: 8px;
         justify-content: space-between;
       }
@@ -109,16 +106,26 @@
         margin-bottom: 8px;
       }
       .ss-1 {
-        grid-column: 1/2;
-        grid-row: 1/3;
+        grid-column: 1/3;
+        grid-row: 1/4;
       }
-      .ss-2 {
-        grid-column: 2/3;
-        grid-row: 1/2;
+      .ss-1 .work-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
-      .ss-3 {
-        grid-column: 2/3;
-        grid-row: 2/3;
+      .ss-1 .work-flex > div {
+        flex-shrink: 0;
+      }
+
+      .section-3 {
+        margin-top: 16px;
+        gap: 8px;
+        justify-content: space-between;
+        display: flex;
+      }
+      .section-3 > div {
+        flex-shrink: 0;
       }
 
       .work {
@@ -175,9 +182,9 @@
         font-size: 1em;
       }
 
-      header, main {
+      /* header, main {
         filter: blur(3px);
-      }
+      } */
 
       @media screen and (max-width: 640px) {
         .contact-box,
@@ -196,12 +203,12 @@
     </style>
   </head>
   <body>
-    <div class="overlay">
+    <!-- <div class="overlay">
       <div class="dialogue">
         <h2>The displayed resume is outdated. Please <a href="mailto:koladeleolaitan@gmail.com">request for a password</a> to access an up-uo-date resume.</h2>
         <input type="password" placeholder="Enter access password">
       </div>
-    </div>
+    </div> -->
     <!-- ==== header ==== -->
     <header>
       <h1 class="name">Koladele Olaitan</h1>
@@ -244,7 +251,7 @@
       <section class="section-1">
         <h2 class="title">About</h2>
         <p>
-          I'm a Front-end Developer with over 3 years of experience making the
+          I'm a Front-end Developer with over 4 years of experience making the
           web better by deploying amazing web applications with a portfolio to
           show for it. <br />
           I use my skills to build first-class, mobile-responsive,
@@ -255,22 +262,22 @@
           <div class="subsection">
             <h3 class="subtitle">Technical Skills</h3>
             <ul>
-              <li><span class="bold">Markup:</span> Semantic HTML, JSX.</li>
-              <li>
-                <span class="bold">UI & Styling:</span> CSS3, Sass, Bootstrap,
-                Tailwind CSS, Material Design, Figma, Adobe XD.
-              </li>
-              <li></li>
-                <span class="bold">No-code Tools:</span> WordPress, Elementor,
-                MailChimp.
-              </li>
               <li>
                 <span class="bold">Programming Languages:</span> JavaScript,
                 TypeScript.
               </li>
               <li>
                 <span class="bold">Libraries and Frameworks:</span> React,
-                Next.js, GSAP, Axios, Swiper.js, Leaflet.js, Chart.js.
+                Next.js, Vue, Nuxt.js.
+              </li>
+              <li><span class="bold">Markup:</span> Semantic HTML5, JSX.</li>
+              <li>
+                <span class="bold">UI & Styling:</span> CSS3, Sass, Bootstrap,
+                Tailwind CSS, Material Design, Figma, Adobe XD.
+              </li>
+              <li>
+                <span class="bold">No-code Tools:</span> WordPress, Elementor,
+                MailChimp.
               </li>
               <li>
                 <span class="bold">Bundlers & Linters:</span> Webpack, Parcel,
@@ -308,79 +315,163 @@
       <section class="section-2">
         <div class="subsection ss-1">
           <h2 class="title">Work Experience</h2>
-          <div class="work">
-            <h3 class="wk_title">Front-end Engineer <i>- Contract</i></h3>
-            <a href="https://www.linkedin.com/company/humdov/" class="wk_company"
-              >HumDov</a
-            >
-            <p class="wk_duration">Nov 2022 - Present (1 month +)</p>
-            <ul>
-              <li>Collaborate with the rest of the team (including the Backend Engineer and the UI Designer) to implement the UI designs.</li>
-              <li>I pay attention to the details of the product we are building and suggest corrections, changes, and improvements.</li>
-              <li>Improve my knwoledge of technologies and stay up-to-date with the web development industry in order to deliver high-quality, production-ready code.</li>
-            </ul>
-          </div>
+          <div class="split work-flex">
+            <div class="work">
+              <h3 class="wk_title">Founding Front-end Engineer (UI/UX)</h3>
+              <a href="https://www.sled.so/" class="wk_company">Sled</a>
+              <p class="wk_duration">Jan 2023 - Present (8mos +)</p>
+              <ul>
+                <li>
+                  Joined as one of the earliest frontend engineers after the
+                  launch of Sled, contributing to the ongoing development and
+                  enhancement of Sled and Dot.
+                </li>
+                <li>
+                  Collaborated closely with the founding team to understand the
+                  product vision and roadmap, translating requirements into
+                  actionable frontend tasks.
+                </li>
+                <li>
+                  Developed new features and functionalities, such as improved
+                  data quality monitoring workflow, split data quality checks by
+                  dimension, and developing a prototype to combine table and
+                  column-level lineage, aligning with user feedback and market
+                  trends.
+                </li>
+                <li>
+                  Developed prototypes and mockups of new features using Figma
+                  to ensure consistent and user-friendly interfaces, maintaining
+                  brand identity and optimal user experience.
+                </li>
+                <li>
+                  Collaborated with cross-functional teams, including backend
+                  engineers, to integrate frontend and backend components
+                  seamlessly.
+                </li>
+                <li>
+                  Actively participated in sprint planning, contributing
+                  technical insights to refine user stories and prioritize
+                  development tasks.
+                </li>
+                <li>
+                  Currently working on shiping the improved lineage which will
+                  drive the startup's growth and solidify its position in the
+                  market.
+                </li>
+              </ul>
+            </div>
+            <div class="work">
+              <h3 class="wk_title">Lead Front-end Engineer</h3>
+              <a
+                href="https://www.linkedin.com/company/humdov/"
+                class="wk_company"
+                >HumDov</a
+              >
+              <p class="wk_duration">Jul 2023 - Present (2mos +)</p>
+              <ul>
+                <li>
+                  Led a team of up to 4 frontend developers in designing,
+                  developing, and delivering a CMS platform project.
+                </li>
+                <li>
+                  Architected and implemented scalable frontend solutions,
+                  enhancing the CMS performance and user experience.
+                </li>
+                <li>
+                  Collaborated closely with cross-functional teams, including
+                  designers, backend engineers, and product managers, to ensure
+                  seamless integration of frontend and backend components.
+                </li>
+                <li>
+                  Mentored and coached team members, conducting regular code
+                  reviews and providing technical guidance to foster skill
+                  growth and code quality.
+                </li>
+                <li>
+                  Stayed up-to-date with emerging frontend technologies and
+                  industry best practices, applying them to drive innovation and
+                  maintain technical excellence within the team.
+                </li>
+              </ul>
+            </div>
 
-          <div class="work">
-            <h3 class="wk_title">Lead Front-end Developer <i>- Contract</i></h3>
-            <a href="#" class="wk_company"
-              >Yetti Technologies</a
-            >
-            <p class="wk_duration">Aug 2022 - Nov 2022 (4 months)</p>
-            <ul>
-              <li>I led the Front-end team to ensure proper implementation of design and moved the company's product from 0 to 70% completion.</li>
-              <li>I assisted junior developers in areas they had difficulty.</li>
-              <li>I reviewed and merged PRs to production.</li>
-            </ul>
-          </div>
+            <div class="work">
+              <h3 class="wk_title">Front-end Engineer</h3>
+              <a
+                href="https://www.linkedin.com/company/humdov/"
+                class="wk_company"
+                >HumDov</a
+              >
+              <p class="wk_duration">Nov 2022 - Jun 2023 (6mos)</p>
+              <ul>
+                <li>
+                  I collaborated with the Backend Engineers and the product
+                  design team to implement the UI designs and pull-in data to
+                  the app.
+                </li>
+                <li>
+                  I paid attention to the details of the product we were
+                  building and suggested corrections, changes, and improvements.
+                </li>
+                <li>
+                  Improved my knwoledge of technologies and stayed up-to-date
+                  with the web development industry in order to deliver
+                  high-quality, production-ready code.
+                </li>
+              </ul>
+            </div>
 
-          <div class="work">
-            <h3 class="wk_title">Web Content Writer</h3>
-            <a href="https://decentralize.africa/" class="wk_company"
-              >Decentralize Africa</a
-            >
-            <p class="wk_duration">Feb 2022 - Nov 2022 (10 months)</p>
-            <ul>
-              <li>Wrote creative content that promote the brand.</li>
-              <li>
-                Improved SEO for higher page and post rankings on search
-                engines.
-              </li>
-              <li>
-                Did editing and proofreading of existing and new articles to
-                ensure they are of good quality.
-              </li>
-              <li>Written over 25 articles so far.</li>
-            </ul>
-          </div>
+            <div class="work">
+              <h3 class="wk_title">
+                Lead Front-end Developer <i>- Contract</i>
+              </h3>
+              <a href="#" class="wk_company">Yetti Technologies</a>
+              <p class="wk_duration">Aug 2022 - Nov 2022 (4mos)</p>
+              <ul>
+                <li>
+                  I led the Front-end team to ensure proper implementation of
+                  design and moved the company's product from 0 to 70%
+                  completion.
+                </li>
+                <li>
+                  I assisted junior developers in areas they had difficulty.
+                </li>
+                <li>
+                  I was responsible for reviewing and merging PRs to production.
+                </li>
+              </ul>
+            </div>
 
-          <div class="work">
-            <h3 class="wk_title">Front-end Developer</h3>
-            <a href="https://unlimited.ng/" class="wk_company">Unlimited.ng</a>
-            <p class="wk_duration">Nov 2020 - July 2021 (9months)</p>
-            <ul>
-              <li>
-                Taught 5 students HTML, CSS, and JavaScript at a bootcamp hosted
-                by the company.
-              </li>
-              <li>
-                Built a website for the bootcamp to automate the registration
-                process and onboarding.
-              </li>
-              <li>Awarded as the most punctual employee.</li>
-              <li>
-                Collaborated with the marketing team to source for clients via
-                various means and also discuss with clients to know their
-                project requirements.
-              </li>
-              <li>Landed the company one paid client.</li>
-              <li>Worked on over 15 unique projects in an 9-month period.</li>
-            </ul>
+            <div class="work">
+              <h3 class="wk_title">Front-end Developer</h3>
+              <a href="https://unlimited.ng/" class="wk_company"
+                >Unlimited.ng</a
+              >
+              <p class="wk_duration">Nov 2020 - July 2021 (9mos)</p>
+              <ul>
+                <li>
+                  Taught 5 students HTML, CSS, and JavaScript at a bootcamp
+                  hosted by the company.
+                </li>
+                <li>
+                  Built a website for the bootcamp to automate the registration
+                  process and onboarding.
+                </li>
+                <li>Awarded as the most punctual employee.</li>
+                <li>
+                  Collaborated with the marketing team to source for clients via
+                  various means and also discuss with clients to know their
+                  project requirements.
+                </li>
+                <li>Landed the company one paid client.</li>
+                <li>Worked on over 15 unique projects in an 9-month period.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        
+
         <!-- Achievements & Education -->
-        <div>
+        <div class="split">
           <div class="subsection ss-2">
             <h2 class="title">Achievements</h2>
             <div class="work">
@@ -420,7 +511,9 @@
                     >problem</a
                   >
                   in responsive website design and I
-                  <a href="https://calcaspectratio.netlify.app/">built a tool</a>
+                  <a href="https://calcaspectratio.netlify.app/"
+                    >built a tool</a
+                  >
                   that solves the problem.
                 </li>
                 <li>
@@ -428,8 +521,8 @@
                   and Blockchain.
                   <a
                     href="https://drive.google.com/drive/folders/1zsMk6UkDlaDJ4_sI9GWNXEtsauW3FKIk?usp=sharing"
-                    >Here is a link to the resources (written guides and videos) I
-                    made for the webinar.</a
+                    >Here is a link to the resources (written guides and videos)
+                    I made for the webinar.</a
                   >
                 </li>
               </ul>
@@ -459,7 +552,7 @@
         </div>
       </section>
     </main>
-    
+
     <a href="Koladele-Olaitan_Resume.pdf" download class="btn"
       >Download Resume</a
     >
