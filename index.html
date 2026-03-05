@@ -18,323 +18,101 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              body: [
+                "Inter",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+            colors: {
+              primary: "#1a365d",
+            },
+          },
+        },
+      };
+    </script>
     <style>
-      :root {
-        --color-primary: #1a365d;
-        --color-text: #1f2937;
-        --color-text-secondary: #4b5563;
-        --color-link: #1f2937;
-        --color-border: #d1d5db;
-        --color-bg: #ffffff;
-        --font-body:
-          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          sans-serif;
-      }
-
-      * {
+      @page {
+        size: A4;
         margin: 0;
-        padding: 0;
-        box-sizing: border-box;
       }
 
       body {
-        font-family: var(--font-body);
-        font-size: 13.5px;
-        line-height: 1.45;
-        color: var(--color-text);
-        background: var(--color-bg);
-        max-width: 850px;
-        margin: 0 auto;
-        padding: 40px 48px;
+        width: 210mm;
+        min-height: 297mm;
         text-align: justify;
       }
 
-      a {
-        color: var(--color-text);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Header */
-      header {
-        margin-bottom: 20px;
-        border-bottom: 2px solid var(--color-primary);
-        padding-bottom: 16px;
-      }
-
-      h1 {
-        font-size: 28px;
-        font-weight: 700;
-        color: var(--color-primary);
-        letter-spacing: -0.5px;
-        margin-bottom: 2px;
-      }
-
-      .tagline {
-        font-size: 15px;
-        color: var(--color-text-secondary);
-        font-weight: 500;
-        margin-bottom: 10px;
-      }
-
-      .contact-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 18px;
-        font-size: 13px;
-      }
-
-      .contact-row a {
-        color: var(--color-text);
-        font-weight: 400;
-      }
-
-      .contact-row .separator {
-        color: var(--color-border);
-      }
-
-      /* Sections */
-      section {
-        margin-bottom: 18px;
-      }
-
-      h2 {
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: var(--color-primary);
-        border-bottom: 1px solid var(--color-border);
-        padding-bottom: 4px;
-        margin-bottom: 10px;
-      }
-
-      /* Summary */
-      .summary p {
-        color: var(--color-text);
-        line-height: 1.5;
-      }
-
-      /* Skills */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: 160px 1fr;
-        gap: 4px 12px;
-      }
-
-      .skills-grid dt {
-        font-weight: 600;
-        font-size: 13px;
-        color: var(--color-text);
-      }
-
-      .skills-grid dd {
-        font-size: 13px;
-        color: var(--color-text-secondary);
-      }
-
-      /* Experience */
-      .role {
-        margin-bottom: 14px;
-      }
-
-      .role:last-child {
-        margin-bottom: 0;
-      }
-
-      .role-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        flex-wrap: wrap;
-        margin-bottom: 2px;
-      }
-
-      .role-title {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--color-text);
-      }
-
-      .role-date {
-        font-size: 13px;
-        color: var(--color-text-secondary);
-        font-weight: 400;
-      }
-
-      .role-company {
-        font-size: 13.5px;
-        font-weight: 500;
-        margin-bottom: 4px;
-      }
-
-      .role-company a {
-        color: var(--color-text);
-        font-weight: 500;
-      }
-
-      ul {
-        padding-left: 18px;
-        margin: 0;
-      }
-
-      li {
-        margin-bottom: 3px;
-        color: var(--color-text);
-      }
-
-      li::marker {
-        color: var(--color-border);
-      }
-
-      /* Projects */
-      .project {
-        margin-bottom: 10px;
-      }
-
-      .project:last-child {
-        margin-bottom: 0;
-      }
-
-      .project-name {
-        font-weight: 600;
-        font-size: 14px;
-      }
-
-      .project-meta {
-        font-size: 13px;
-        color: var(--color-text-secondary);
-        margin-bottom: 3px;
-      }
-
-      /* Education */
-      .edu-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-
-      .edu-degree {
-        font-weight: 600;
-        font-size: 14px;
-      }
-
-      .edu-school {
-        font-size: 13.5px;
-        color: var(--color-text-secondary);
-      }
-
-      /* Download button */
-      .download-btn {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 12px 28px;
-        background: var(--color-primary);
-        color: #fff;
-        border-radius: 4px;
-        font-size: 14px;
-        font-weight: 500;
-        transition: background 0.2s;
-      }
-
-      .download-btn:hover {
-        background: #0f2440;
-        text-decoration: none;
-      }
-
-      /* Responsive */
-      @media screen and (max-width: 640px) {
-        body {
-          padding: 24px 20px;
-          font-size: 13px;
-        }
-
-        h1 {
-          font-size: 24px;
-        }
-
-        .contact-row {
-          flex-direction: column;
-          gap: 4px;
-        }
-
-        .contact-row .separator {
-          display: none;
-        }
-
-        .skills-grid {
-          grid-template-columns: 1fr;
-          gap: 6px;
-        }
-
-        .role-header {
-          flex-direction: column;
-        }
-      }
-
-      /* Print */
       @media print {
         body {
-          padding: 0;
-          font-size: 12px;
-          max-width: none;
-        }
-
-        h1 {
-          font-size: 24px;
-        }
-
-        h2 {
-          font-size: 12px;
+          padding: 10mm 12mm !important;
+          font-size: 11px !important;
         }
 
         .download-btn {
-          display: none;
+          display: none !important;
         }
 
-        a {
-          color: var(--color-text);
-        }
-
-        section {
+        .no-break {
           page-break-inside: avoid;
         }
-
-        .role {
-          page-break-inside: avoid;
-        }
-      }
-
-      @page {
-        margin: 0.5in;
       }
     </style>
   </head>
-  <body>
-    <header>
-      <h1>Koladele Olaitan</h1>
-      <p class="tagline">Senior Frontend Engineer &middot; Technical Lead</p>
-      <div class="contact-row">
-        <a href="mailto:koladeleolaitan@gmail.com">koladeleolaitan@gmail.com</a>
-        <span class="separator">|</span>
-        <a href="tel:+2348101555748">+2348101555748</a>
-        <span class="separator">|</span>
-        <a href="https://www.linkedin.com/in/koladeleolaitan/">LinkedIn</a>
-        <span class="separator">|</span>
-        <a href="https://github.com/publikphigor">GitHub</a>
-        <span class="separator">|</span>
-        <a href="https://koladeleolaitan.com/">Portfolio</a>
+  <body
+    class="font-body text-gray-800 bg-white px-[12mm] py-[10mm] text-[11.5px] leading-[1.4] mx-auto"
+  >
+    <!-- Header -->
+    <header class="mb-3 border-b-2 border-primary pb-2.5">
+      <h1
+        class="text-[24px] font-bold text-primary tracking-tight leading-tight"
+      >
+        Koladele Olaitan
+      </h1>
+      <p class="text-[13px] text-gray-500 font-medium mb-1.5">
+        Senior Frontend Engineer &middot; Technical Lead
+      </p>
+      <div class="flex flex-wrap gap-x-3.5 gap-y-1 text-[11.5px]">
+        <a href="mailto:koladeleolaitan@gmail.com" class="text-gray-800"
+          >koladeleolaitan@gmail.com</a
+        >
+        <span class="text-gray-300">|</span>
+        <a href="tel:+2348101555748" class="text-gray-800">+2348101555748</a>
+        <span class="text-gray-300">|</span>
+        <a
+          href="https://www.linkedin.com/in/koladeleolaitan/"
+          class="text-gray-800"
+          >LinkedIn</a
+        >
+        <span class="text-gray-300">|</span>
+        <a href="https://github.com/publikphigor" class="text-gray-800"
+          >GitHub</a
+        >
+        <span class="text-gray-300">|</span>
+        <a href="https://koladeleolaitan.com/" class="text-gray-800"
+          >Portfolio</a
+        >
       </div>
     </header>
 
     <main>
       <!-- Summary -->
-      <section class="summary">
-        <h2>Summary</h2>
-        <p>
+      <section class="mb-3">
+        <h2
+          class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+        >
+          Summary
+        </h2>
+        <p class="text-gray-800 leading-[1.45]">
           Senior Frontend Engineer and Technical Lead with 6+ years of
           experience architecting high-performance web applications using React,
           Vue.js, and TypeScript. Proven track record leading frontend teams,
@@ -347,260 +125,330 @@
       </section>
 
       <!-- Skills -->
-      <section>
-        <h2>Skills</h2>
-        <dl class="skills-grid">
-          <dt>Languages</dt>
-          <dd>JavaScript (ES6+), TypeScript, Python, HTML5, CSS3</dd>
-
-          <dt>Frameworks</dt>
-          <dd>React, Next.js, Vue.js, Nuxt.js, Node.js</dd>
-
-          <dt>State & Data</dt>
-          <dd>Redux, Zustand, Pinia, React Query, GraphQL, REST APIs</dd>
-
-          <dt>Styling</dt>
-          <dd>Tailwind CSS, SCSS/Sass, Styled Components, Material-UI</dd>
-
-          <dt>Testing</dt>
-          <dd>Playwright, Jest, React Testing Library, Cypress</dd>
-
-          <dt>Tools & DevOps</dt>
-          <dd>
+      <section class="mb-3">
+        <h2
+          class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+        >
+          Skills
+        </h2>
+        <dl class="grid grid-cols-[130px_1fr] gap-x-2 gap-y-0.5 text-[11px]">
+          <dt class="font-semibold text-gray-800">Languages</dt>
+          <dd class="text-gray-600">
+            JavaScript (ES6+), TypeScript, Python, HTML5, CSS3
+          </dd>
+          <dt class="font-semibold text-gray-800">Frameworks</dt>
+          <dd class="text-gray-600">
+            React, Next.js, Vue.js, Nuxt.js, Node.js
+          </dd>
+          <dt class="font-semibold text-gray-800">State & Data</dt>
+          <dd class="text-gray-600">
+            Redux, Zustand, Pinia, React Query, GraphQL, REST APIs
+          </dd>
+          <dt class="font-semibold text-gray-800">Styling</dt>
+          <dd class="text-gray-600">
+            Tailwind CSS, SCSS/Sass, Styled Components, Material-UI
+          </dd>
+          <dt class="font-semibold text-gray-800">Testing</dt>
+          <dd class="text-gray-600">
+            Playwright, Jest, React Testing Library, Cypress
+          </dd>
+          <dt class="font-semibold text-gray-800">Tools & DevOps</dt>
+          <dd class="text-gray-600">
             Git, Vite, Webpack, Docker, GitHub Actions, CI/CD, Vercel, AWS
           </dd>
-
-          <dt>AI & Productivity</dt>
-          <dd>
-            Claude Code, OpenAI Codex, GitHub Copilot, workflow automation,
-            prompt engineering
+          <dt class="font-semibold text-gray-800">AI & Productivity</dt>
+          <dd class="text-gray-600">
+            Claude Code, OpenAI Codex, GitHub Copilot, workflow automation
           </dd>
         </dl>
       </section>
 
       <!-- Experience -->
-      <section>
-        <h2>Experience</h2>
+      <section class="mb-3">
+        <h2
+          class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+        >
+          Experience
+        </h2>
 
-        <div class="role">
-          <div class="role-header">
-            <span class="role-title">Founding Frontend Engineer</span>
-            <span class="role-date">Jan 2023 - Present</span>
+        <div class="grid grid-cols-2 gap-x-5 gap-y-3">
+          <!-- Column 1 -->
+          <div class="space-y-3">
+            <!-- GetDot -->
+            <div class="no-break">
+              <div class="flex justify-between items-baseline mb-0.5">
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Founding Frontend Engineer</span
+                >
+                <span class="text-[11px] text-gray-500"
+                  >Jan 2023 - Present</span
+                >
+              </div>
+              <p class="text-[11px] font-medium text-gray-800 mb-0.5">
+                <a href="https://www.getdot.ai/" class="text-gray-800"
+                  >GetDot.ai</a
+                >
+                (AI Data Analytics &middot; Lorch, Germany &middot; Remote)
+              </p>
+              <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                <li>
+                  Lead frontend engineer driving UI architecture for an
+                  AI-powered data analyst platform trusted by Duolingo, Choco,
+                  Airbyte, and BlaBlaCar, serving 50+ enterprise clients
+                </li>
+                <li>
+                  Architected mobile-first responsive redesign and
+                  organization-wide schedule management with server-side
+                  filtering, sorting, and pagination using Vue.js, TypeScript,
+                  and Python
+                </li>
+                <li>
+                  Built full-stack features across frontend and backend,
+                  including API endpoints for branding settings, empty DataFrame
+                  handling in agentic flows, and server-side pagination
+                </li>
+                <li>
+                  Built advanced data visualization features including
+                  cell-level conditional formatting, heatmaps, and bar charts,
+                  increasing user workflow efficiency by 60%
+                </li>
+                <li>
+                  Implemented infinite scroll, pull-to-load chat history,
+                  real-time chat isolation, and race condition fixes, supporting
+                  70-100K monthly queries
+                </li>
+                <li>
+                  Led migration from TestCafe to Playwright for E2E testing and
+                  fixed CI pipeline concurrency issues, reducing flaky test
+                  failures
+                </li>
+                <li>
+                  Reduced bundle size by 25% and improved Core Web Vitals scores
+                  by 40% through code splitting, lazy loading, and performance
+                  optimization
+                </li>
+              </ul>
+            </div>
+
+            <!-- Influx AI -->
+            <div class="no-break">
+              <div class="flex justify-between items-baseline mb-0.5">
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Lead Frontend Engineer</span
+                >
+                <span class="text-[11px] text-gray-500"
+                  >Jun 2024 - Apr 2025</span
+                >
+              </div>
+              <p class="text-[11px] font-medium text-gray-800 mb-0.5">
+                Influx AI (Blockchain Analytics &amp; AI &middot; Johannesburg,
+                SA &middot; Remote &middot; Contract)
+              </p>
+              <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                <li>
+                  Led frontend development of a blockchain analytics dashboard
+                  with AI-powered chat, smart contract scanning, wallet
+                  profiling, and token safety scoring using React, TypeScript,
+                  and Next.js
+                </li>
+                <li>
+                  Architected and shipped a major dashboard rebuild, introducing
+                  subscription management, trending token discovery, and
+                  real-time DEX transaction views
+                </li>
+                <li>
+                  Built AI chat interface with contextual token analysis,
+                  network-aware filtering, improving user engagement with
+                  on-chain data
+                </li>
+                <li>
+                  Developed the company marketing website and token claim
+                  client, integrating Web3 wallet connections and on-chain
+                  transaction verification
+                </li>
+                <li>
+                  Implemented dynamic safety score visualizations, smart
+                  contract flag severity systems, and wallet detail views for
+                  multi-network token analysis
+                </li>
+              </ul>
+            </div>
           </div>
-          <p class="role-company">
-            <a href="https://www.getdot.ai/">GetDot.ai</a> (AI Data Analytics
-            Platform &middot; Lorch, Germany &middot; Remote)
-          </p>
-          <ul>
-            <li>
-              Lead frontend engineer driving the UI architecture for an
-              AI-powered data analyst platform trusted by Duolingo, Choco,
-              Airbyte, and BlaBlaCar, serving 50+ enterprise clients
-            </li>
-            <li>
-              Architected and shipped mobile-first responsive redesign and
-              organization-wide schedule management with server-side filtering,
-              sorting, and pagination using Vue.js, TypeScript, and Python
-            </li>
-            <li>
-              Built full-stack features across frontend and backend, including
-              API endpoints for branding settings, empty DataFrame handling in
-              agentic flows, and server-side pagination for schedule and run
-              history views
-            </li>
-            <li>
-              Built advanced data visualization features including cell-level
-              conditional formatting, heatmaps, and bar charts in data tables,
-              increasing user workflow efficiency by 60%
-            </li>
-            <li>
-              Implemented infinite scroll, pull-to-load chat history, real-time
-              chat isolation, and race condition fixes, supporting 70-100K
-              monthly queries across the AI chatbot
-            </li>
-            <li>
-              Led migration from TestCafe to Playwright for E2E testing and
-              fixed CI pipeline concurrency issues, reducing flaky test failures
-              and deployment time
-            </li>
-            <li>
-              Reduced bundle size by 25% and improved Core Web Vitals scores by
-              40% through code splitting, lazy loading, and performance
-              optimization
-            </li>
-          </ul>
-        </div>
 
-        <div class="role">
-          <div class="role-header">
-            <span class="role-title">Lead Frontend Engineer</span>
-            <span class="role-date">Jun 2024 - Apr 2025</span>
+          <!-- Column 2 -->
+          <div class="space-y-3">
+            <!-- HumDov Lead -->
+            <div class="no-break">
+              <div class="flex justify-between items-baseline mb-0.5">
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Lead Frontend Engineer</span
+                >
+                <span class="text-[11px] text-gray-500"
+                  >Jul 2023 - Jan 2025</span
+                >
+              </div>
+              <p class="text-[11px] font-medium text-gray-800 mb-0.5">
+                <a
+                  href="https://www.linkedin.com/company/humdov/"
+                  class="text-gray-800"
+                  >HumDov</a
+                >
+                (Enterprise CMS &middot; Texas, US &middot; Remote)
+              </p>
+              <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                <li>
+                  Led a cross-functional team of 4+ frontend developers,
+                  delivering 15+ features on schedule with 99.9% uptime for an
+                  enterprise CMS platform
+                </li>
+                <li>
+                  Architected a modular React component library and design
+                  system, reducing development time by 50% and ensuring
+                  consistent UI across 20+ pages
+                </li>
+                <li>
+                  Established CI/CD pipelines with automated testing, cutting
+                  deployment time from 2 hours to 15 minutes
+                </li>
+                <li>
+                  Mentored 3 junior developers through code reviews and pair
+                  programming, achieving 100% team retention and skill
+                  advancement
+                </li>
+                <li>
+                  Led the recruitment process for 2 senior and 1 mid-level
+                  developer through technical interviews and onboarding
+                </li>
+              </ul>
+            </div>
+
+            <!-- HumDov IC -->
+            <div class="no-break">
+              <div class="flex justify-between items-baseline mb-0.5">
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Frontend Engineer</span
+                >
+                <span class="text-[11px] text-gray-500"
+                  >Nov 2022 - Jun 2023</span
+                >
+              </div>
+              <p class="text-[11px] font-medium text-gray-800 mb-0.5">
+                <a
+                  href="https://www.linkedin.com/company/humdov/"
+                  class="text-gray-800"
+                  >HumDov</a
+                >
+              </p>
+              <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                <li>
+                  Developed responsive React components and REST API
+                  integrations, contributing to 40% improvement in user
+                  engagement metrics
+                </li>
+                <li>
+                  Implemented automated testing with Jest and React Testing
+                  Library, achieving 85% code coverage and reducing production
+                  bugs by 45%
+                </li>
+                <li>
+                  Optimized bundle size through code splitting and analysis,
+                  improving page load times by 35%
+                </li>
+              </ul>
+            </div>
+
+            <!-- Unlimited.ng -->
+            <div class="no-break">
+              <div class="flex justify-between items-baseline mb-0.5">
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Web Developer</span
+                >
+                <span class="text-[11px] text-gray-500"
+                  >Nov 2020 - Jul 2021</span
+                >
+              </div>
+              <p class="text-[11px] font-medium text-gray-800 mb-0.5">
+                <a href="https://unlimited.ng/" class="text-gray-800"
+                  >Unlimited.ng</a
+                >
+                (Kwara, Nigeria)
+              </p>
+              <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                <li>
+                  Built a full-stack bootcamp registration platform using React
+                  and Node.js, automating enrollment and reducing administrative
+                  overhead by 60%
+                </li>
+                <li>
+                  Led client acquisition and delivery for 15+ web projects,
+                  generating $50K+ in revenue over 9 months
+                </li>
+                <li>
+                  Designed and delivered web development curriculum for 5+
+                  students, achieving 100% completion rate and 80% job placement
+                </li>
+              </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="no-break">
+              <h2
+                class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+              >
+                Projects
+              </h2>
+              <div class="mb-1.5">
+                <span class="text-[12px] font-semibold"
+                  ><a href="https://www.auritrack.com/" class="text-gray-800"
+                    >Auritrack</a
+                  ></span
+                >
+                <span class="text-[11px] text-gray-600">
+                  &mdash; AI-powered personal finance platform &middot; React,
+                  TypeScript, Next.js, Supabase, Python
+                </span>
+                <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                  <li>
+                    Founded and built a full-stack finance management app with
+                    AI chat, Telegram bot, smart bank statement imports, and
+                    spending predictions, serving thousands of users across 50+
+                    countries (4.8/5 rating)
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <span class="text-[12px] font-semibold text-gray-800"
+                  >Open Source Contributions</span
+                >
+                <span class="text-[11px] text-gray-600">
+                  &mdash; Ubuntu, SigNoz, ClickHouse, BioDrop, Defaang
+                </span>
+                <ul class="pl-3.5 space-y-0.5 text-gray-800">
+                  <li>
+                    Contributed 20+ merged pull requests to major open-source
+                    projects, including UI fixes, documentation improvements,
+                    and feature additions
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <p class="role-company">
-            Influx AI (Blockchain Analytics &amp; AI Platform &middot;
-            Johannesburg, South Africa &middot; Remote &middot; Contract)
-          </p>
-          <ul>
-            <li>
-              Led frontend development of a blockchain analytics dashboard with
-              AI-powered chat, smart contract scanning, wallet profiling, and
-              token safety scoring using React, TypeScript, and Next.js
-            </li>
-            <li>
-              Architected and shipped a major dashboard rebuild, introducing
-              subscription management, trending token discovery, and real-time
-              DEX transaction views
-            </li>
-            <li>
-              Built AI chat interface with contextual token analysis, random
-              question generation, and network-aware filtering, improving user
-              engagement with on-chain data
-            </li>
-            <li>
-              Developed the company marketing website and token claim client,
-              integrating Web3 wallet connections and on-chain transaction
-              verification
-            </li>
-            <li>
-              Implemented dynamic safety score visualizations, smart contract
-              flag severity systems, and wallet detail views for multi-network
-              token analysis
-            </li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="role-header">
-            <span class="role-title">Lead Frontend Engineer</span>
-            <span class="role-date">Jul 2023 - Jan 2025</span>
-          </div>
-          <p class="role-company">
-            <a href="https://www.linkedin.com/company/humdov/">HumDov</a>
-            (Enterprise CMS Platform &middot; Texas, US &middot; Remote)
-          </p>
-          <ul>
-            <li>
-              Led a cross-functional team of 4+ frontend developers, delivering
-              15+ features on schedule with 99.9% uptime for an enterprise CMS
-              platform
-            </li>
-            <li>
-              Architected a modular React component library and design system,
-              reducing development time by 50% and ensuring consistent UI across
-              20+ pages
-            </li>
-            <li>
-              Established CI/CD pipelines with automated testing, cutting
-              deployment time from 2 hours to 15 minutes
-            </li>
-            <li>
-              Mentored 3 junior developers through code reviews and pair
-              programming, achieving 100% team retention and skill advancement
-            </li>
-            <li>
-              Led the recruitment process for 2 senior and 1 mid-level developer
-              through technical interviews and onboarding
-            </li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="role-header">
-            <span class="role-title">Frontend Engineer</span>
-            <span class="role-date">Nov 2022 - Jun 2023</span>
-          </div>
-          <p class="role-company">
-            <a href="https://www.linkedin.com/company/humdov/">HumDov</a>
-          </p>
-          <ul>
-            <li>
-              Developed responsive React components and REST API integrations,
-              contributing to 40% improvement in user engagement metrics
-            </li>
-            <li>
-              Implemented automated testing with Jest and React Testing Library,
-              achieving 85% code coverage and reducing production bugs by 45%
-            </li>
-            <li>
-              Optimized bundle size through code splitting and analysis,
-              improving page load times by 35%
-            </li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="role-header">
-            <span class="role-title">Web Developer</span>
-            <span class="role-date">Nov 2020 - Jul 2021</span>
-          </div>
-          <p class="role-company">
-            <a href="https://unlimited.ng/">Unlimited.ng</a>
-            (Kwara, Nigeria)
-          </p>
-          <ul>
-            <li>
-              Built a full-stack bootcamp registration platform using React and
-              Node.js, automating enrollment and reducing administrative
-              overhead by 60%
-            </li>
-            <li>
-              Led client acquisition and delivery for 15+ web projects,
-              generating $50K+ in revenue over 9 months
-            </li>
-            <li>
-              Designed and delivered web development curriculum for 5+ students,
-              achieving 100% completion rate and 80% job placement
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section>
-        <h2>Projects</h2>
-
-        <div class="project">
-          <span class="project-name"
-            ><a href="https://www.auritrack.com/">Auritrack</a></span
-          >
-          <span class="project-meta">
-            &mdash; AI-powered personal finance platform &middot; React,
-            TypeScript, Next.js, Supabase, Python
-          </span>
-          <ul>
-            <li>
-              Founded and built a full-stack finance management app with AI
-              chat, Telegram bot, smart bank statement imports, and spending
-              predictions, serving thousands of users across 50+ countries
-              (4.8/5 rating)
-            </li>
-          </ul>
-        </div>
-
-        <div class="project">
-          <span class="project-name">Open Source Contributions</span>
-          <span class="project-meta">
-            &mdash; Ubuntu, SigNoz, ClickHouse, BioDrop, Defaang
-          </span>
-          <ul>
-            <li>
-              Contributed 20+ merged pull requests to major open-source
-              projects, including UI fixes, documentation improvements, and
-              feature additions
-            </li>
-          </ul>
         </div>
       </section>
 
       <!-- Education -->
-      <!-- <section>
-        <h2>Education</h2>
-        <div class="edu-row">
+      <!-- <section class="mb-3">
+        <h2
+          class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+        >
+          Education
+        </h2>
+        <div class="flex justify-between items-baseline">
           <div>
-            <p class="edu-degree">
+            <p class="text-[12px] font-semibold text-gray-800">
               Bachelor of Education, Counsellor Education
             </p>
-            <p class="edu-school">University of Ilorin, Nigeria</p>
+            <p class="text-[11px] text-gray-500">University of Ilorin, Nigeria</p>
           </div>
         </div>
       </section> -->
@@ -609,7 +457,7 @@
     <a
       href="Koladele-Olaitan_Resume.pdf"
       download
-      class="download-btn"
+      class="download-btn inline-block mt-4 px-6 py-2.5 bg-primary text-white rounded text-[13px] font-medium hover:bg-[#0f2440] transition-colors"
       style="display: none"
       >Download Resume</a
     >
