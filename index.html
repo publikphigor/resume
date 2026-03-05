@@ -52,9 +52,14 @@
         text-align: justify;
       }
 
+      @page {
+        size: A4;
+        margin: 10mm 12mm;
+      }
+
       @media print {
         body {
-          padding: 10mm 12mm !important;
+          padding: 0 !important;
           font-size: 11px !important;
         }
 
@@ -390,48 +395,51 @@
               </ul>
             </div>
 
-            <!-- Projects -->
-            <div class="no-break">
-              <h2
-                class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
-              >
-                Projects
-              </h2>
-              <div class="mb-1.5">
-                <span class="text-[12px] font-semibold"
-                  ><a href="https://www.auritrack.com/" class="text-gray-800"
-                    >Auritrack</a
-                  ></span
-                >
-                <span class="text-[11px] text-gray-600">
-                  &mdash; AI-powered personal finance platform &middot; React,
-                  TypeScript, Next.js, Supabase, Python
-                </span>
-                <ul class="pl-3.5 space-y-0.5 text-gray-800">
-                  <li>
-                    Founded and built a full-stack finance management app with
-                    AI chat, Telegram bot, smart bank statement imports, and
-                    spending predictions, serving thousands of users across 50+
-                    countries (4.8/5 rating)
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <span class="text-[12px] font-semibold text-gray-800"
-                  >Open Source Contributions</span
-                >
-                <span class="text-[11px] text-gray-600">
-                  &mdash; Ubuntu, SigNoz, ClickHouse, BioDrop, Defaang
-                </span>
-                <ul class="pl-3.5 space-y-0.5 text-gray-800">
-                  <li>
-                    Contributed 20+ merged pull requests to major open-source
-                    projects, including UI fixes, documentation improvements,
-                    and feature additions
-                  </li>
-                </ul>
-              </div>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-3">
+        <h2
+          class="text-[12px] font-bold uppercase tracking-wider text-primary border-b border-gray-300 pb-1 mb-1.5"
+        >
+          Projects
+        </h2>
+        <div class="grid grid-cols-2 gap-x-5">
+          <div class="no-break">
+            <span class="text-[12px] font-semibold"
+              ><a href="https://www.auritrack.com/" class="text-gray-800"
+                >Auritrack</a
+              ></span
+            >
+            <span class="text-[11px] text-gray-600">
+              &mdash; AI-powered personal finance platform &middot; React,
+              TypeScript, Next.js, Supabase, Python
+            </span>
+            <ul class="pl-3.5 space-y-0.5 text-gray-800">
+              <li>
+                Founded and built a full-stack finance management app with AI
+                chat, Telegram bot, smart bank statement imports, and spending
+                predictions, serving thousands of users across 50+ countries
+                (4.8/5 rating)
+              </li>
+            </ul>
+          </div>
+          <div class="no-break">
+            <span class="text-[12px] font-semibold text-gray-800"
+              >Open Source Contributions</span
+            >
+            <span class="text-[11px] text-gray-600">
+              &mdash; Ubuntu, SigNoz, ClickHouse, BioDrop, Defaang
+            </span>
+            <ul class="pl-3.5 space-y-0.5 text-gray-800">
+              <li>
+                Contributed 20+ merged pull requests to major open-source
+                projects, including UI fixes, documentation improvements, and
+                feature additions
+              </li>
+            </ul>
           </div>
         </div>
       </section>
